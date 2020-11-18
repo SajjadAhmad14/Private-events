@@ -1,3 +1,9 @@
 class User < ApplicationRecord
-  validates :name, :email, presence: true
+  before_validation :downcase
+  validates :user_name, :email, presence: true
+  validates_uniqueness_of :user_name
+
+  def downcase
+    self.user_name.downcase!
+  end
 end
