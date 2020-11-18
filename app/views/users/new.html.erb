@@ -1,1 +1,8 @@
-<p>New User</p>
+<h1>Create a new User</h1>
+<%= form_with(model: @user, local: true) do |f|%>
+  <%= f.label :name%>
+  <%= f.text_field :name %><br>
+  <%= f.label :email %>
+  <%= f.email_field :email %><br>
+  <%= f.submit "Submit" %>
+<% end %>
