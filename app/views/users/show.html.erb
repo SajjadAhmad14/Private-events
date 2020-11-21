@@ -1,1 +1,4 @@
-<h2><%= @user.user_name %></h2>
+<% @user.created_events.each do |event|%>
+<p><%= event.date %></p>
+
+<% end %>
