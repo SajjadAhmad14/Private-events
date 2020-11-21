@@ -1,11 +1,12 @@
-ActiveRecord::Schema.define(version: 2020_11_21_142429) do
+ActiveRecord::Schema.define(version: 2020_11_21_180125) do
 
   create_table "events", force: :cascade do |t|
-    t.string "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.integer "creator_id", null: false
+    t.date "created_on"
+    t.string "description"
     t.index ["creator_id"], name: "index_events_on_creator_id"
   end
 
