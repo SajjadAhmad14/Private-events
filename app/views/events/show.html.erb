@@ -1,1 +1,6 @@
-<h1><%= @event.creator.user_name %></h1>
+<% @event.event_attendences.each do |attendence|%>
+<p><%= attendence.event_attendence_id %></p>
+
+<% end %>
+
+
