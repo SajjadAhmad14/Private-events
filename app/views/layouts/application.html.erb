@@ -20,10 +20,18 @@
       <li class="nav-item">
       <%= link_to 'All Events', events_path, class: 'nav-link'%>
       </li>
+      <% if logged_in? %>
+      <li class="nav-item">
+      <a class="nav-link" href="#"><%= current_user_name%></a>
+      </li>
+      
+      <% end %>
     </ul>
-    <%= link_to 'Log out', logout_path, class: 'btn btn-secondary font-weight-bold', :method => :delete%>
+    <% unless logged_in?  %>
     <%= link_to 'Sign Up', new_user_path, class:'btn btn-secondary font-weight-bold' %>
     <%= link_to 'Log In', login_path, class:'btn btn-secondary font-weight-bold' %>
+    <% end %>
+    
   </div>
 </nav>
     <%= yield %>
