@@ -2,7 +2,9 @@
 <%= form_with(model: @event, local: true) do |f|%>
   <%= f.label :name%>
   <%= f.text_field :name %><br>
-  <%= f.label :description %>
+  <%= f.label :date %>
+   <%= f.text_field :date %><br>
+   <%= f.label :description %>
   <%= f.text_field :description %><br>
   <%= f.submit "Submit" %>
 <% end %>
