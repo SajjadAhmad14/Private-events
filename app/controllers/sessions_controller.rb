@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to user
     else
+      flash.now[:error] = "Username does not exits!"
       render 'new'
     end
   end
@@ -17,6 +18,10 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     @user = nil
-    redirect_to root_path
+    if @user.nil?
+      redirect_to root_path, notice: "You have successfully logged out."
+    end
+    
+
   end
 end
