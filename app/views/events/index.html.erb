@@ -1,10 +1,11 @@
 <h2>Upcoming events</h2>
-<% @events.where("date > ?", Date.today).each do |event| %>
+<% events = future_events %>
+<% events.each do |event| %>
 <p><%= event.date %></p>
 <% end %>
 
 <h2>Past events</h2>
-<% @events.where("date < ?", Date.today).each do |event| %>
+<% events = past_events %>
+<% .each do |event| %>
 <p><%= event.date %></p>
 <% end %>
-
