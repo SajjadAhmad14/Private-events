@@ -1,5 +1,8 @@
 class EventsController < ApplicationController
+  before_action :current_user, only: [:new, :create]
+  
   include EventsHelper
+  
   def new
     @event = Event.new
   end

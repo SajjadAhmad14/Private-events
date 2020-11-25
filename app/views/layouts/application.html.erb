@@ -22,9 +22,11 @@
       </li>
       <% if logged_in? %>
       <li class="nav-item">
-      <a class="nav-link" href="#"><%= current_user_name%></a>
+      <a class="nav-link" href="#"><%= current_user.user_name%></a>
       </li>
-      
+      <li class="nav-item">
+      <%= link_to 'Create Event', new_event_path, class: 'nav-link'%>
+      </li>
       <% end %>
     </ul>
     <% if logged_in?  %>
