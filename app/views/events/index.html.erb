@@ -1,11 +1,9 @@
 <h2>Upcoming events</h2>
-<% events = future_events %>
-<% events.each do |event| %>
+<% Event.future_events.each do |event| %>
 <p><%= event.date %></p>
 <% end %>
 
 <h2>Past events</h2>
-<% events = past_events %>
-<% .each do |event| %>
+<% Event.past_events.each do |event| %>
 <p><%= event.date %></p>
 <% end %>
