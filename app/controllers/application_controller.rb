@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
+  helper_method :current_user
   def current_user
-    @user = User.find(sessiion[:user_id])
+    session[:user_id] ? User.find(session[:user_id]) : false
   end
 end
