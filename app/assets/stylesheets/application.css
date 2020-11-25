@@ -30,10 +30,18 @@
  input[type=text] {
   background-color: #3CBC8D;
   color: white;
-  border-color: red;
+  font-size: 40px;
+  font-weight: bold;
+  border: none;
+  outline: none;
 }
 
-.user_namee_label{
+.user_name_label{
   margin-left:-30px
 }
  
+input#session_user_name {
+  width: 500px;
+  height: 50px;
+  border-radius: 5px
+}

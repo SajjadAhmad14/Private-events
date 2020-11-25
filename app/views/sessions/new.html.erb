@@ -1,11 +1,11 @@
 <div class="d-flex justify-content-center mt-5">
   <div>
-    <h1 class = "text-center">Log In</h1>
-    <%= form_with scope: :session, local: true do |f|%>
-      <%= f.label :name,class:'user_namee_label'%>
-      <%= f.text_field :user_name %><br>
+    <h1 class = "text-center">Sign In</h1>
+    <%= form_with scope: :session, local: true, class: 'form-fields' do |f|%>
+      <%= f.label :name, class:'font-weight-bolder align-middle'%>
+      <%= f.text_field :user_name%><br>
       <div class='d-flex'>
-        <%= f.submit "Submit", class: 'btn btn-primary mx-auto'%>
+        <%= f.submit "Submit", class: 'btn btn-primary mx-auto mt-2 font-weight-bolder'%>
       <div>
     <% end %>
   </div>
