@@ -15,6 +15,9 @@
  *= require_self
  */
 
+ body {
+   background-color: #c0c0c0;
+ }
  .navbar .navbar-brand {
    font-weight: bolder;
  }
@@ -23,3 +26,14 @@
    font-size: 20px;
    color: #fff;
  }
+
+ input[type=text] {
+  background-color: #3CBC8D;
+  color: white;
+  border-color: red;
+}
+
+.user_namee_label{
+  margin-left:-30px
+}
+ 
