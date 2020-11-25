@@ -11,7 +11,7 @@
 
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">Eventise</a>
+  <a class="navbar-brand text-body" href="#">EVENTISE</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -30,11 +30,11 @@
       <% end %>
     </ul>
     <% if logged_in?  %>
-    <%= link_to 'Log Out', logout_path, class:'btn btn-secondary font-weight-bold', :method => :delete%>
+    <%= link_to 'Sign Out', logout_path, class:'btn btn-secondary font-weight-bold', :method => :delete%>
     <% end %>
     <% unless logged_in?  %>
-    <%= link_to 'Sign Up', new_user_path, class:'btn btn-secondary font-weight-bold' %>
-    <%= link_to 'Log In', login_path, class:'btn btn-secondary font-weight-bold' %>
+    <%= link_to 'Sign Up', new_user_path, class:'btn btn-secondary font-weight-bold mr-lg-5' %>
+    <%= link_to 'Sign In', login_path, class:'btn btn-secondary font-weight-bold' %>
     <% end %>
     
   </div>

@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center mt-5">
   <div>
-    <h1 class = "text-center">Sign In</h1>
-    <%= form_with scope: :session, local: true, class: 'form-fields' do |f|%>
+    <h1 class = "text-center font-weight-bolder">Sign In</h1>
+    <%= form_with scope: :session, local: true do |f|%>
       <%= f.label :name, class:'font-weight-bolder align-middle'%>
       <%= f.text_field :user_name%><br>
       <div class='d-flex'>
