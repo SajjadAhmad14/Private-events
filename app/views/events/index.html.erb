@@ -1,29 +1,32 @@
-<h2>Upcoming events</h2>
-<div class = 'row'>
-  <% Event.future_events.each do |event| %>
-    <div class="card col-3" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title"><%= event.name %></h5>
-        <h6 class="card-subtitle mb-2 text-muted"><%= event.date %></h6>
-        <p class="card-text"><%= event.description %></p>
-        <% if logged_in?%>
-        <%= render 'attendees/attendence_form', event: event %>
-        <% end %>
-        <%= link_to 'Show', event, class: 'card-link'%>
+<div class = 'container my-3'>
+  <h2 class = 'font-weight:bolder'>Upcoming events</h2>
+  <div class = 'row'>
+    <% Event.future_events.each do |event| %>
+      <div class="card col-3 bg-info text-white font-weight:bolder mt-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= event.name %></h5>
+          <h6 class="card-subtitle mb-2"><%= event.date %></h6>
+          <p class="card-text"><%= event.description %></p>
+          <% if logged_in?%>
+            <%= render 'attendees/attendence_form', event: event%>
+          <% end %>
+          <%= link_to 'Show', event, class: 'btn btn-primary' %>
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>
-<h2>Past events</h2>
-<div class = 'row'>
-  <% Event.past_events.each do |event| %>
-    <div class="card col-3" style="width: 16rem;">
-      <div class="card-body">
-        <h5 class="card-title"><%= event.name %></h5>
-        <h6 class="card-subtitle mb-2 text-muted"><%= event.date %></h6>
-        <p class="card-text"><%= event.description %></p>
-        <%= link_to 'Show', event, class: 'card-link'%>
+    <% end %>
+  </div>
+  <hr>
+  <h2>Past events</h2>
+  <div class = 'row'>
+    <% Event.past_events.each do |event| %>
+      <div class="card col-3 bg-info text-white font-weight:bolder" style="width: 16rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= event.name %></h5>
+          <h6 class="card-subtitle mb-2"><%= event.date %></h6>
+          <p class="card-text"><%= event.description %></p>
+          <%= link_to 'Show', event, class: 'btn btn-primary' %>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
