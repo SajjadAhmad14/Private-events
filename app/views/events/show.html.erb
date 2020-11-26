@@ -1,6 +1,6 @@
-<% @event.event_attendences.each do |attendence|%>
-<p><%= attendence.event_attendence_id %></p>
-
+<h2>All Attendies</h2>
+<% @event.event_attendees.each do |attendee| %>
+<%= attendee.user_name %>
 <% end %>
 
 
