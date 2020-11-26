@@ -1,4 +1,10 @@
+<h1>Created Events</h1>
+<%@user.created_events.each do |event|%>
+<%= event.name %>
+<% end %>
+
+<h1>Attended Events</h1>
 <% @user.attended_events.each do |event|%>
 <p><%= event.name %></p>
-
 <% end %>
+<h1>Upcoming Events</h1>
