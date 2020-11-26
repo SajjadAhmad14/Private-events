@@ -1,11 +1,7 @@
 class AttendeesController < ApplicationController
-
   def create
-    p event_id = params[:id]
-    if logged_in?
-      p session[:user_id]
-      @event_attendee = EventAttendence.new(event_attendence_id:session[:user_id], attended_event_id:event_id)
-      @event_attendee.save
-    end 
+    event_id = params[:event_id]
+    @event_attendee = EventAttendence.find_or_initialize_by(event_attendence_id: current_user.id, attended_event_id: event_id)
+    redirect_to root_path if @event_attendee.save
   end
 end

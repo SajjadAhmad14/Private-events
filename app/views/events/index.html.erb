@@ -7,7 +7,7 @@
         <h6 class="card-subtitle mb-2 text-muted"><%= event.date %></h6>
         <p class="card-text"><%= event.description %></p>
         <% if logged_in?%>
-        <%= link_to 'Attend', attendees_path, method: :post, class: 'card-link'%>
+        <%= render 'attendees/attendence_form', event: event %>
         <% end %>
         <%= link_to 'Show', event, class: 'card-link'%>
       </div>
