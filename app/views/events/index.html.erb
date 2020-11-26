@@ -1,9 +1,27 @@
 <h2>Upcoming events</h2>
-<% Event.future_events.each do |event| %>
-<p><%= event.date %></p>
-<% end %>
-
+<div class = 'row'>
+  <% Event.future_events.each do |event| %>
+    <div class="card col-3" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= event.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= event.date %></h6>
+        <p class="card-text"><%= event.description %></p>
+        <a href="#" class="card-link">Attend</a>
+        <%= link_to 'Show', event, class: 'card-link'%>
+      </div>
+    </div>
+  <% end %>
+</div>
 <h2>Past events</h2>
-<% Event.past_events.each do |event| %>
-<p><%= event.date %></p>
-<% end %>
+<div class = 'row'>
+  <% Event.past_events.each do |event| %>
+    <div class="card col-3" style="width: 16rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= event.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= event.date %></h6>
+        <p class="card-text"><%= event.description %></p>
+        <%= link_to 'Show', event, class: 'card-link'%>
+      </div>
+    </div>
+  <% end %>
+</div>
