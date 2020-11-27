@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :created_events, foreign_key: :creator_id, class_name: 'Event', dependent: :destroy
 
   def downcase
-    self.user_name.downcase!
+    user_name.downcase!
   end
 end

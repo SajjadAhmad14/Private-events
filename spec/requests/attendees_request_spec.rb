@@ -1,5 +1,4 @@
 require 'rails_helper'
 
-RSpec.describe "Attendees", type: :request do
-
+RSpec.describe 'Attendees', type: :request do
 end
