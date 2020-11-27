@@ -13,22 +13,22 @@
  *= require_tree .
  *= require_self
  */
- body {
-   background-color: #c0c0c0;
- }
+body {
+  background-color: #c0c0c0;
+}
 
- .navbar .navbar-brand {
-   font-weight: bolder;
- }
+.navbar .navbar-brand {
+  font-weight: bolder;
+}
 
- .navbar-nav .nav-item .nav-link{
-   font-weight: bolder;
-   font-size: 20px;
-   color: #fff;
- }
+.navbar-nav .nav-item .nav-link {
+  font-weight: bolder;
+  font-size: 20px;
+  color: #fff;
+}
 
- input[type=text], 
- input[type=email] {
+input[type=text],
+input[type=email] {
   background-color: #3cbc8d;
   color: white;
   font-size: 40px;
@@ -42,5 +42,5 @@
 
 label {
   display: block;
-  margin-bottom: 0
+  margin-bottom: 0;
 }
