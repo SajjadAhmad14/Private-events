@@ -13,9 +13,8 @@
  *= require_tree .
  *= require_self
  */
-
  body {
-   background-color:#c0c0c0;
+   background-color: #c0c0c0;
  }
 
  .navbar .navbar-brand {
