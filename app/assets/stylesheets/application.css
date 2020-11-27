@@ -38,3 +38,8 @@
   height: 50px;
   border-radius: 5px
 }
+
+label {
+  display:block;
+  margin-bottom: 0
+}

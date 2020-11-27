@@ -5,10 +5,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    params.inspect
     if @user.save
-      redirect_to @user
+      redirect_to root_path
     else
+      flash[:errors] = @user.errors.full_messages
       render 'new'
     end
   end
