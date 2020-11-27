@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   def logged_in?
     current_user ? true : false
   end
+  
   def past_events
     Event.where("date < ?", Date.today)
   end
