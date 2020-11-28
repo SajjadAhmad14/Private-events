@@ -29,10 +29,12 @@ Clone the repo in your local folder where you want to run it<br>
 **Step 2**<br>
 Run 'cd Private-events'<br>
 **Step 3**<br>
-Run 'yarn install'<br>
+Run 'bundle install'<br>
 **Step 4**<br>
-Run 'rails db:migrate''<br>
+Run 'yarn install'<br>
 **Step 5**<br>
+Run 'rails db:migrate''<br>
+**Step 6**<br>
 Run 'rails server'
 
 
