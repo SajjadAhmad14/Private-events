@@ -1,7 +1,7 @@
 <div class = 'container my-3'>
   <h1 class = 'font-weight:bolder'>Upcoming events</h1>
   <div class = 'row'>
-    <% Event.future_events.each do |event| %>
+    <% @upcoming_events.each do |event| %>
       <div class="card col-3 bg-info text-white font-weight:bolder mt-2" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title"><%= event.name %></h5>
@@ -18,7 +18,7 @@
   <hr>
   <h1>Past events</h1>
   <div class = 'row'>
-    <% Event.past_events.each do |event| %>
+    <% @past_events.each do |event| %>
       <div class="card col-3 bg-info text-white font-weight:bolder" style="width: 16rem;">
         <div class="card-body">
           <h5 class="card-title"><%= event.name %></h5>
