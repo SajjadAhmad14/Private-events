@@ -30,7 +30,7 @@
       </div>
       <div class = 'col-4 bg-secondary'>
         <h1 class = 'font-weight-bolder'>Upcoming Events</h1>
-        <% if future_events.any?  %>
+        <% if current_user.attended_events.any?  %>
           <% future_events.each do |e| %>
             <ul>
               <li>
