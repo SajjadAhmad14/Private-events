@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   before_validation :downcase
-  validates :user_name, :email, presence: true
+  validates :user_name, presence: true
   validates_uniqueness_of :user_name
 
   has_many :event_attendences, foreign_key: :event_attendence_id
