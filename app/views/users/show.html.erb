@@ -4,8 +4,8 @@
     <div class = 'row'>
       <div class = 'col-4 bg-info'>
         <h1 class = 'font-weight-bolder'> Created Events </h1>
-        <%if current_user.created_events.any?%>
-          <%current_user.created_events.each do |e| %>
+        <%if @created_events.any?%>
+          <% @created_events.each do |e| %>
             <ul>
               <li>
                 <%= e.name %>
