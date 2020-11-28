@@ -31,4 +31,16 @@ RSpec.describe Event, type: :model do
     event = user.created_events.new(creator_id: nil)
     expect(event).to_not be_valid
   end
+
+  it 'Event has many event_attendences' do
+    expect(Event.reflect_on_association(:event_attendences).macro).to eq(:has_many)
+  end
+
+  it 'Event has many event_attendees' do
+    expect(Event.reflect_on_association(:event_attendees).macro).to eq(:has_many)
+  end
+
+  it 'Event belongs to a creator' do
+    expect(Event.reflect_on_association(:creator).macro).to eq(:belongs_to)
+  end
 end
