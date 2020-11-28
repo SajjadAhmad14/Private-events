@@ -2,7 +2,7 @@
   <div>
   <h1 class = 'text-center font-weight-bolder mb-3'><%= capitalize_user_name %>'s Account</h1>
     <div class = 'row'>
-      <div class = 'col-4'>
+      <div class = 'col-4 bg-info'>
         <h1 class = 'font-weight-bolder'> Created Events </h1>
         <%if current_user.created_events.any?%>
           <%current_user.created_events.each do |e| %>
@@ -14,7 +14,7 @@
           <% end %>
         <% end %>
       </div>
-      <div class = 'col-4'>
+      <div class = 'col-4 bg-success'>
         <h1 class = 'font-weight-bolder'> Events Attended In Past</h1>
         <%if current_user.attended_events.any?%>
           <%current_user.attended_events.where("date < ?", Date.today).each do |e| %>
@@ -28,7 +28,7 @@
           <h2>No past attended events</h2>
         <% end %>
       </div>
-      <div class = 'col-4'>
+      <div class = 'col-4 bg-secondary'>
         <h1 class = 'font-weight-bolder'>Upcoming Events</h1>
         <% if future_events.any?  %>
           <% future_events.each do |e| %>
