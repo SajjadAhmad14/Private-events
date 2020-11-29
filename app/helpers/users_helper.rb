@@ -1,7 +1,6 @@
 module UsersHelper
-
   def past_attended_events
-    current_user.attended_events.where("date < ?", Date.today)
+    current_user.attended_events.where('date < ?', Date.today)
   end
 
   def future_events

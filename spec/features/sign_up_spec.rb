@@ -14,5 +14,4 @@ RSpec.describe 'Create a user', type: :feature do
     click_on 'Submit'
     expect(page).to have_content("User name can't be blank")
   end
-
 end
