@@ -8,7 +8,7 @@ RSpec.describe Event, type: :model do
   end
 
   it 'Event is valid if a name, descrption, and date attributes are present' do
-    user = User.create(user_name:'unknown')
+    user = User.create(user_name: 'unknown')
     creator_id = user.id
     event = user.created_events.new(name: 'new', date: '2020-02-02', description: 'new event', creator_id: creator_id)
     expect(event).to be_valid

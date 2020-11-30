@@ -9,6 +9,5 @@ RSpec.describe 'Logout a user', type: :feature do
     click_button 'Submit'
     click_on 'Sign Out'
     expect(page).to have_content('You have successfully logged out.')
-    
   end
 end

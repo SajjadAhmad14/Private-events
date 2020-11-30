@@ -17,5 +17,4 @@ RSpec.describe 'Login a user and create an event', type: :feature do
     click_button 'Submit'
     expect(page).to have_content('somename')
   end
-
 end
