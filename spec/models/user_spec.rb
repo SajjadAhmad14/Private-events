@@ -18,8 +18,8 @@ RSpec.describe User, type: :model do
   end
 
   it 'User name should be unique' do
-    User.new(user_name: 'sajjad')
-    duplicate_user = User.new(user_name: 'sajjad')
+    User.create(user_name: 'name')
+    duplicate_user = User.create(user_name: 'name')
     expect(duplicate_user.valid?).to be_falsy
   end
 
