@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to user
     else
-      flash.now[:error] = 'Username does not exits!'
+      flash.now[:error] = 'Username does not exist!'
       render 'new'
     end
   end
