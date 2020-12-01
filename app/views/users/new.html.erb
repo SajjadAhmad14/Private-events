@@ -1,0 +1,12 @@
+<div class = 'd-flex justify-content-center mt-5'>
+  <div>
+    <h1 class = 'text-center font-weight-bolder'>Sign Up</h1>
+    <%= form_with(model: @user, local: true) do |f|%>
+      <%= f.label :name, class: 'font-weight-bolder align-middle'%>
+      <%= f.text_field :user_name %><br>
+      <div class = 'd-flex justify-content-center'>
+        <%= f.submit "Submit", class: 'btn btn-primary mt-2' %>
+      </div>
+    <% end %>
+  <div>
+</div>

@@ -9,7 +9,38 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
+ *= require bootstrap
  *= require_tree .
  *= require_self
  */
+body {
+  background-color: #c0c0c0;
+}
+
+.navbar .navbar-brand {
+  font-weight: bolder;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-weight: bolder;
+  font-size: 20px;
+  color: #fff;
+}
+
+input[type=text],
+input[type=email] {
+  background-color: #3cbc8d;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  width: 500px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0;
+}

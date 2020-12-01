@@ -1,0 +1,16 @@
+
+<h1 class = 'text-center mt-5 font-weight-bolder'>Create an Event</h1>
+<div class = 'd-flex justify-content-center'>
+<%= form_with(model: @event, local: true) do |f|%>
+  <%= f.label :name, class: 'font-weight-bolder mb-2'%>
+  <%= f.text_field :name, class: 'mb-2'%><br>
+  <%= f.label :date, class: 'mb-2 font-weight-bolder'%>
+   <h3>Format: 'yyyy-mm-dd'</h3>
+   <%= f.text_field :date %>
+   <%= f.label :description, class: 'my-2 font-weight-bolder'%>
+  <%= f.text_field :description %><br>
+  <div class = 'd-flex justify-content-center mt-3'>
+  <%= f.submit "Submit", class: 'btn btn-primary font-weight-bolder' %>
+  </div>
+<% end %>
+<div>

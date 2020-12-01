@@ -4,12 +4,41 @@
     <title>PrivateEvents</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand text-body" href="#">EVENTISE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto ml-lg-5">
+          <li class="nav-item">
+            <%= link_to 'All Events', events_path, class: 'nav-link'%>
+          </li>
+          <% if logged_in? || signed_up? %>
+            <li class="nav-item">
+              <%= link_to current_user.user_name.capitalize, current_user, class: 'nav-link'%>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Create Event', new_event_path, class: 'nav-link'%>
+            </li>
+          <% end %>
+        </ul>
+        <% if logged_in? || signed_up? %>
+          <%= link_to 'Sign Out', logout_path, class:'btn btn-secondary font-weight-bold', :method => :delete%>
+        <% end %>
+        <% unless logged_in? || signed_up? %>
+          <%= link_to 'Sign Up', new_user_path, class:'btn btn-secondary font-weight-bold mr-lg-5' %>
+          <%= link_to 'Sign In', login_path, class:'btn btn-secondary font-weight-bold' %>
+        <% end %>
+      </div>
+    </nav>
+    <% flash.each do |key, msg| %>
+      <%= msg %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

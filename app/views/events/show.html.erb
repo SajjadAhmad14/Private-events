@@ -1,0 +1,13 @@
+<div class = 'd-flex justify-content-center my-5'>
+  <div>
+  <h2 class = 'font-weight-bolder mb-3 bg-primary'>Attending <%= @event.name %></h2>
+    <div class = 'col-4'>
+  
+      <% @event.event_attendees.each do |attendee| %>
+        <ul>
+        <li><h2 class = 'font-weight-bolder'><%= attendee.user_name %></h2></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
